@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lab4-service
+  namespace: lab4
+spec:
+  selector:
+    app: lab4
+  ports:
+    - name: application
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
